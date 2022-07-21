@@ -7,7 +7,7 @@ const AddNote = (props) => {
     const context = useContext(NoteContext);
     const { addNote } = context;
     const [note, setNote] = useState({ title: "", description: "", tag: "" });
-    const { showAlert } = props;
+   
     //Handle Click Function 
     const handleClick = () => {
         addNote(note.title, note.description, note.tag);
