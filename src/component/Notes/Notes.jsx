@@ -3,14 +3,14 @@ import NoteContext from '../../context/notes/noteContext';
 import AddNote from '../AddNote/AddNote';
 import NoteItem from '../NoteItem/NoteItem';
 import { useNavigate } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Notes = (props) => {
     const context = useContext(NoteContext);
     const { notes, getNotes, editNote } = context;
     const [note, setNote] = useState({ id: "", etitle: "", edescription: "", etag: "" })
-    let navigate = useNavigate();
+    
 
     useEffect(() => {
         // if (localStorage.getItem('token')) {
