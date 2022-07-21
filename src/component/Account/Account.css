@@ -1,0 +1,11 @@
+.profile-img{
+    border-radius: 50%;
+    width: 25%;
+    height: auto;
+}
+.user-email, .view-all-notes{
+    font-size: 1.5rem;
+}
+.total-notes{
+    font-weight: 350;
+}

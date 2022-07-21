@@ -1,0 +1,28 @@
+.social-links a{
+    margin-right: 1.5rem;
+}
+.social-links a i{
+    font-size: 1.5rem;
+    color: black;
+}
+.fa-github:hover{
+    color: rgb(106, 106, 106);
+}
+.fa-linkedin:hover{
+    color: rgb(0, 128, 255);
+}
+.fa-instagram:hover{
+    color: rgb(255, 0, 136);
+}
+.fa-envelope:hover{
+    color: rgb(255, 42, 0);
+}
+
+
+.myPhoto img{
+    height: auto;
+    width: 15rem;
+}
+.modalName{
+    margin: auto;
+}
