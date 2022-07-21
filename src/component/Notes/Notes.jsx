@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import NoteContext from '../../context/notes/noteContext';
 import AddNote from '../AddNote/AddNote';
 import NoteItem from '../NoteItem/NoteItem';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
