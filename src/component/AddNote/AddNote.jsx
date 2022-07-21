@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import NoteContext from '../../context/notes/noteContext';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const AddNote = (props) => {
