@@ -22,12 +22,21 @@ const NoteItem = (props) => {
                             }}></i>
                             <i className="fa-solid fa-trash-can mx-2 deleteBtn" onClick={() => {
                                 deleteNote(note._id);
-                                toast.success('Deleted Successfully');
+                                toast.success('Note Deleted Successfully', {
+                                    position: "top-center",
+                                    autoClose: 2000,
+                                    theme:"colored",
+                                    hideProgressBar: false,
+                                    closeOnClick: true,
+                                    pauseOnHover: true,
+                                    draggable: true,
+                                    progress: undefined,
+                                    });
                             }}></i>
                         </div>
 
                     </div>
-
+                    <small className='note-tag mb-2'>#{note.tag}</small>
                     <p className="card-text note-description">{note.description}</p>
 
                 </div>
