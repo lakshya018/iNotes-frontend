@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import NoteContext from '../../context/notes/noteContext';
 import AddNote from '../AddNote/AddNote';
 import NoteItem from '../NoteItem/NoteItem';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Notes = (props) => {
@@ -10,17 +10,11 @@ const Notes = (props) => {
     const { notes, getNotes, editNote } = context;
     const [note, setNote] = useState({ id: "", etitle: "", edescription: "", etag: "" })
     
-
+   
     useEffect(() => {
-        // if (localStorage.getItem('token')) {
-            getNotes();
-        // }
-        // else {
-        //     navigate("/login");
-        // }
-        // eslint-disable-next-line
-    }, [])
-
+        getNotes();
+    })
+    
     const ref = useRef(null);
     const refClose = useRef(null);
     //Update Note Function
@@ -34,7 +28,16 @@ const Notes = (props) => {
 
         editNote(note.id, note.etitle, note.edescription, note.etag);
         refClose.current.click();
-        toast.success('Updated Successfully');
+        toast.success('Note Updated Successfully', {
+            position: "top-center",
+            autoClose: 2000,
+            theme:"colored",
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
 
     }
 
@@ -94,7 +97,7 @@ const Notes = (props) => {
 
             </div>
 
-            {/* <ToastContainer /> */}
+            <ToastContainer />
         </>
 
     )
