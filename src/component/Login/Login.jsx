@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import login from '../../assets/login.jpg'
 import { ToastContainer, toast } from 'react-toastify';
@@ -10,7 +10,6 @@ const Login = (props) => {
     // const [email, setEmail] = useState("");
     // const [password, setPassword] = useState("");
     let navigate = useNavigate();
-
     const [form, setForm] = useState({ email: "", password: "" })
     //Handle Submit Function
     const handleSubmit = async (e) => {
@@ -26,13 +25,14 @@ const Login = (props) => {
         const json = await response.json();
 
         console.log(json);
+        
+
         if (json.success) {
             //Save the auth token and redirect
            
             localStorage.setItem("loginStatus",true);
             localStorage.setItem("token", json.authToken);
-
-            navigate("/notes");
+            navigate("/");
             
             
             
