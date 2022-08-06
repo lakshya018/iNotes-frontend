@@ -11,4 +11,7 @@ i{
 .icons{
     margin-left: auto;
 }
-  
+.note-tag{
+    display: block;
+    color: gray;
+}
