@@ -4,7 +4,6 @@ import NoteContext from "./noteContext";
 const NoteState = (props) => {
     const host = "https://notezia.herokuapp.com";
     const notesInitial = [];
-
     const [notes, setNotes] = useState(notesInitial);
     const [user , setUser] = useState([]);
     //Get All Notes
@@ -52,10 +51,9 @@ const NoteState = (props) => {
             },
           });
         
-        const json = await response.json();
-        console.log(json);
-        
-       
+        const json = response.json();
+     
+       console.log(json);
         const newNotes = notes.filter((note) => { return note._id !== id })
         setNotes(newNotes);
     }
@@ -73,8 +71,7 @@ const NoteState = (props) => {
           });
         
         const json = await response.json();
-        console.log(json);
-       
+       console.log(json);
         let newNotes = JSON.parse(JSON.stringify(notes));
         //Logic to edit in Client
         for (let index = 0; index<newNotes.length; index++) {
